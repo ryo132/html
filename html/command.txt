@@ -1,0 +1,2 @@
+Windows：Shift + Alt + F
+自動インデント
