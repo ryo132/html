@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+header{
+    z-index: 0;
+      height: 100px; 
+      position: fixed;
+    top: 0px;
+    background-color: green;
+    color: white;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 0px 40px 0px rgba(3, 255, 16, 0.25);
+  }
+
+body {
+    background-image: url("img/screen.jpg"); 
+    background-repeat: no-repeat;
+    background-size: 300%;
+    position: relative;
+  }
+
+/* ナビゲーション */
+
+.menu ul{
+    margin: 0;
+    padding: 0;
+    list-style: none; /* ・の表示を消す */
+}
+
+.menu li{
+    display: inline;
+
+    margin:  5px;
+}
+
+
+. img {
+  position: block;
+}

@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="google">
   <meta name="viewport" content="width=device-width,initial-scale=1" user-scalable="No"><!--スマホの仮想領域-->
   <link href="https://fonts.googleapis.com/css?family=Bangers|M+PLUS+1p|Sigmar+One&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" type="text/css"href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
   <link rel="stylesheet" type="text/css"href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
   <link rel="stylesheet" type="text/css" href="css/slick.css">
@@ -14,13 +13,12 @@
   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
   <link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <script type="text/javascript" src="js/slick.js"></script>
   <script type="text/javascript" src="js/animation.js"></script>
-  <script type="text/javascript" src="js/jump.js"></script>
+  <link rel="stylesheet" type="text/css" href="test.css">
 
   <title>NEW MOTION</title>
 
@@ -36,7 +34,6 @@
     </ul>
 
 
-    <div>
     <ul>
 
       <li><a href="#1" class="btn4">NEWS</a></li>
@@ -65,6 +62,26 @@
           </a>
           <li>させる事が出来ます。</li><br>
           </ul>
+
+          <script>
+
+  // #で始まるアンカーをクリックした場合に処理
+  $('.a[href^=#]').click(function(){
+    // 移動先を50px下にずらす
+    var adjust = 100;
+    // スクロールの速度
+    var speed = 1000; // ミリ秒
+    // アンカーの値取得
+    var href= $(this).attr("href");
+    // 移動先を取得
+    var target = $(href == "#" || href == "" ? 'html' : href);
+    // 移動先を調整
+    var position = target.offset().top + adjust;
+    // スムーススクロール
+    $('body,html').animate({scrollTop:position}, speed, 'swing');
+    return false;
+});
+          </script>
    
       </div>
 
