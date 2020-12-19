@@ -1,5 +1,5 @@
 h1{
-  font-family: 'Bangers', cursive;
+
   color: white;
   text-align:left;
   display: inline-block;
@@ -11,7 +11,7 @@ a{
 }
 
 h2{
-  font-family: 'Sigmar One', cursive;
+
   font-size: 20px;
   text-align: center;
 }
@@ -23,28 +23,44 @@ h3{
 }
 
 h4{
-  color: pink;
+  font-size: 30px;
+  border-top: solid; 
+  border-bottom: solid; 
+  margin: 0;
+  ;
+
+}
+
+h5{
   font-size: 20px;
-  text-align: left;
-  margin: 0px;
+  border-bottom: dotted; 
+  margin: 10px;
+}
+
+a.anchor {
+  display: block;
+  padding-top: 70px;
+  margin-top: -70px;
 }
 
 p{
-  font-family: 'M+PLUS+1p', cursive;
-  font-size: 20px;
+  color: white;
+
 }
 
 
 
-a:link { color : white; }
-a:visited { color : white; }
+li .moji:link { color : white; }
+li .moji:visited { color : white; }
 
+li .visit_site:link { color : red; }
+li .visit_site:visited { color : red; }
 
 body {
   background-image: url("../img/screen.jpg"); 
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100%;
+  background-size: cover;
 
 }
    
@@ -53,7 +69,7 @@ body {
    
   header{
     z-index: 10;
-      height: 80px; 
+      height: 210px; 
       position: fixed;
     top: 0px;
     background-color: green;
@@ -62,46 +78,47 @@ body {
     text-align: center;
     z-index: 2;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    border-bottom: 3px solid #ff6347;
   }
 
-  .overline{
-    z-index: 20;
-    height: 130px;
-    position: absolute;
-    
-  }
 
-  ul {
+  ul .moji {
       overflow:hidden;
       list-style:none;
       margin: 20 auto;
       z-index: 20;
       display: inline;
-      padding: 0px 10px 20px 10px;
+      padding: 5px 10px 0px 10px;
+
   }
    
-  ul li {
-    display: inline;
-    padding: 0px 0px 0px 5px;
-    font-size: 20px;
+  ul li .moji { /* list */
+    display: inline-block;
+    padding: 5px 0px 0px 15px;
+    font-size: 25px;
+    
+
     }
    
-  ul li:hover {
+  ul li .moji:hover {
     -webkit-transform-origin: left top;
     -ms-transform-origin: left top;
     transform-origin: left top;
     -webkit-transform: scale(1, 1);
     -ms-transform: scale(1, 1);
-    transform: scale(1, 1)
+    transform: scale(1, 1);
+    font-size: 30px;
+    transform: .10;
   }
 
   .footer{
-    height: 120px;
+    height: 65px;
     width: 100%;
     background-color: green;
     text-align: center;
     color: #fff;
     clear: both;
+    border-top: 3px solid #ff6347;
   }
  
   .btn4{
@@ -110,50 +127,16 @@ body {
     position: relative;
     text-decoration: none;
     display:inline-block;
-    font-family: 'Bangers', cursive;
+
     color: white;
-    text-align:left;
-    display: inline-block;
+
+
   }
-   
-  .btn4::before {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0px;
-    width: 100%;
-    height: 2px;
-    background: #3367ff;
-    display: block;
-    -webkit-transform-origin: right top;
-    -ms-transform-origin: right top;
-    transform-origin: right top;
-    -webkit-transform: scale(0, 1);
-    -ms-transform: scale(0, 1);
-    transform: scale(0, 1);
-    -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
-    transition: transform 0.4s cubic-bezier(1, 0, 0, 1)
-  }
-  .btn4:hover::before {
-    -webkit-transform-origin: left top;
-    -ms-transform-origin: left top;
-    transform-origin: left top;
-    -webkit-transform: scale(1, 1);
-    -ms-transform: scale(1, 1);
-    transform: scale(1, 1);
-  }
-   
-  .btn2{
-    text-transform: uppercase;
-    text-align: center;
-    position: relative;
-    text-decoration: none;
-    display:inline-block;
-    border-bottom: 2px solid #3367ff;
-  }
+
 
   .main-contents {
     height: 100%;
+
     margin-left: auto;
     margin-right: auto;
     width: 80%;
@@ -162,23 +145,32 @@ body {
   .main{
     width: 100%;
   /*  float: right; */
-    margin-top: 120px;
+    margin-top: 240px;
+    height: 2000px;
+    
     /* margin-left: 1rem; */
 
   }
 
+  .boxImg{
+    width: 100%;
+    height: 120px;
+
+  }
+
   .box1{
-    top: 1000;
+
     /* border:5px solid #1f1f1fd7; */
     padding:10px; margin:20px;
     background-color: white;
     background-size: cover;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 50px;
   }
 
   .box2{
-    top: 1000;
+    top: 1000px;
     border:5px solid #1f1f1fd7;
     padding:10px; margin:20px;
     background-color: white;
@@ -187,19 +179,80 @@ body {
     margin-right: auto;
   }
 
-img {
-  width: auto; /* Image width adjust to height to remain proportional */
-  max-width: 100%; /* Image doesn't exceed parent element's width */
-  max-height: 90vh; /* Image doesn't exceed viewport height */
-  margin: 2rem auto;
+
+  .box3{
+    width: 100%;
+
+    border: solid;
+    padding: 20px;
+    float: left;
+  }
+
+  .box4{
+    width: 33.33%;
+
+    border: solid;
+    padding: 50px;
+    float: left;
+  }
+
+  .box5{
+    width: 33.33%;
+
+    border: solid;
+    padding: 50px;
+    float: left;
+  }
+
+  .box6{
+    width: 33.33%;
+
+    border: solid;
+    padding: 50px;
+    float: left;
+  }
+
+  .box7{
+    width: 100%;
+    height: auto;
+
+margin: 5px;
+    float: left;
+  }
+
+  .box8{
+    width: 100%;
+
+
+    padding: 50px;
+    float: left;
+  }
+
+.boxImg img {
+  width: 250px; /* Image width adjust to height to remain proportional */
+  height: auto;
+  
+  margin: 5px auto;
 } 
 
-  img.left{float:left;}
 
+.boxA {
+  top: 5500px;
+  background-color: white;
+}
+
+.boxB:after {
+  content: "";
+  display: block;
+  clear: both;
+
+}
   hr{
     margin-top: 10px;
 
   }
+
+
 
     /*        js     javascript   */
 
@@ -215,3 +268,48 @@ img {
       visibility: visible;
       transform: translateY(0);
     }
+
+    body {
+      margin: 0;
+    }
+    header {
+      position: fixed;
+      margin: 0px 0;
+      width: 100%;
+      font-size: 2em;
+      text-align: center;
+      color: #fff;
+      background-color: green;
+      transition: .3s;
+    }
+    main {
+
+      text-align: center;
+      background-color: #fff;
+    }
+
+    .is-animation {
+      margin: -140px 0;
+    }
+
+    /* 携帯の表示 */
+/* ihpne6s 750*1334 */
+
+@media(max-width:1115px){
+
+
+
+  .follow-me {
+    display: none;
+  
+  }
+  
+}
+
+
+
+@media (max-width: 686px){
+  header{
+      height: 258px; 
+  } 
+}

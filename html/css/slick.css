@@ -28,7 +28,7 @@ html, body {
   z-index: 1;
 }
 .slick-prev:before, .slick-next:before {
-  color: #000;
+  color: yellowgreen;
 }
 .slick-slide {
   transition: all ease-in-out .3s;
@@ -58,7 +58,7 @@ html, body {
   overflow: visible;
 }
 .full-screen.slider {
-  max-width: 300px;
+  max-width: 720px;
   margin: 0 auto;
 }
 

@@ -9,3 +9,14 @@ $(document).on('ready', function() {
     infinite: true,
   });
 });
+
+$(function() {
+	$(window).on('load scroll', function() {
+		var scrollPos = $(this).scrollTop();
+		if ( scrollPos > 80 ) {
+			$('header').addClass('is-animation');
+		} else {
+			$('header').removeClass('is-animation');
+		}
+	});
+});	

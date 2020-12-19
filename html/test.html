@@ -16,23 +16,62 @@
     </head>
 
     <header>
-      <nav class="menu">
-        タイトル ↓ロゴだけで分かるか？LIVE HOUSEと分かるものを追加しても
-        
-        
+     
+        <div class = "box1"><a href="./test.html"><img src="./img/logo-Transparent1.png" alt="ロゴ homeへ"></a></div>
+
+
+      <div class = "box2">
         <ul>
-        <li class = "">aaaa</li>
-        <li class = "">aaaa</li>
-        <li class = "">aaaa</li>
+          <li><a href="#1" class="btn4">NEWS</a></li>
+          <li><a href="#2" class="btn4">SCHEDULE</a></li>
+          <li><a href="#3" class="btn4">ABOUT</a></li>
+          <li><a href="#4" class="btn4">ACCESS</a></li>
         </ul>
 
-        
-      </nav>
-    </header>
-
-    <body>
-      <div class = "box1">
       </div>
 
-  </bod\y>
+
+
+
+    </header>
+
+      <script>
+    $(function() {
+      headerAdjust('.header');
+      $(window).on('scroll', function() {
+          headerAdjust('.header');
+      });
+  });
+   
+  // ヘッダーのサイズ調整
+  var adjustPoint = 20;
+  var adjustClass = 'fix';
+  function headerAdjust(tgt) {
+      var scrollTop = $(window).scrollTop();
+      if(scrollTop > adjustPoint) {
+          $(tgt).addClass(adjustClass);
+      } else {
+          $(tgt).removeClass(adjustClass);
+      }
+  }
+
+</script>
+
+    <body>
+
+
+
+
+      <div class = "box3">
+        aaaaaaa
+        <div><a href="./test.html"><img src="./img/1.jpg" alt="ロゴ homeへ"></a></div>
+      </div>
+
+
+      
+      <div class = "box4">
+        <p>aaaaa</p>
+      </div>
+
+  </body>
 </html>

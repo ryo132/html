@@ -1,8 +1,12 @@
 @charset "UTF-8";
 
+a {
+  text-decoration: none;
+}
+
 header{
     z-index: 0;
-      height: 100px; 
+      height: 230px; 
       position: fixed;
     top: 0px;
     background-color: green;
@@ -10,6 +14,13 @@ header{
     width: 100%;
     text-align: center;
     box-shadow: 0px 0px 40px 0px rgba(3, 255, 16, 0.25);
+
+  }
+
+  .header:after{
+    content: "";  /* 表示確認用 */
+    display: block;
+    clear: both;
   }
 
 body {
@@ -19,21 +30,88 @@ body {
     position: relative;
   }
 
+  a:link { color : white; }
+  a:visited { color : white; }
+
 /* ナビゲーション */
 
-.menu ul{
+.header ul{
     margin: 0;
     padding: 0;
     list-style: none; /* ・の表示を消す */
+    overflow:hidden; /* スクロール操作を円滑にする為, box 内に入れる */
 }
 
-.menu li{
+.box2 li{
     display: inline;
+    margin:  0px 10px;
+    font-size: 35px;
+}
 
-    margin:  5px;
+.box1 img {
+  display: inline-block;
+  width: 300px;
+  height: auto;
+
+}
+
+/* boxList カラム落ちなし logoから*/
+
+.box1{
+  width: 100%;
+  height: auto;
+  float: left;
+
+}
+
+.box2{
+  width: 100%;
+  height: auto;
+  display: inline;
+}
+
+.box3{
+  margin-top: 300px;
+  width: 100%;
+  height: auto;
+}
+
+.box4{
+  width: 100%;
+  height: auto;
 }
 
 
-. img {
-  position: block;
+
+/* 携帯の表示 */
+/* ihpne6s 750*1334 */
+
+@media(min-width: 500px) and (max-width:703px){
+
+  
+  *{
+    font-size: 25px;
+  }
+}
+
+
+@media (max-width: 587px){
+
+
+  *{
+    font-size: 20px;
+  }
+
+  header{
+      height: 198px; 
+  } 
+
+
+
+  
+  .box1 img {
+    width: 250px;
+    height: auto;
+  }
+
 }
